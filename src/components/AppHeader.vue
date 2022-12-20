@@ -13,10 +13,12 @@ export default {
 </script>
 
 <template>
-    <img class="logo" src="../img/Logo-Netflix.png" alt="">
-    <input placeholder="Cerca" @keyup="$emit('search')" @keydown="$emit('search')" @keyup.enter="$emit('search')"
-        v-model="store.valueSearch" type="search">
-    <!-- <button @click="$emit('search')"></button> -->
+    <div>
+        <img class="logo" src="../img/Logo-Netflix.png" alt="">
+        <input placeholder="Cerca" @keyup.enter="$emit('search')" @keyup="$emit('search')" v-model="store.valueSearch"
+            type="search">
+        <!-- <button @click="$emit('search')"></button> -->
+    </div>
 </template>
 
 <style lang="scss" scoped>

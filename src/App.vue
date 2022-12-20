@@ -19,16 +19,6 @@ export default {
 
   methods: {
     getMovies() {
-      // apiUserURL = store.apiURL;
-
-      axios
-        .get(store.apiURL)
-        .then(res => {
-          store.moviesList = res.data.results;
-        })
-        .catch(err => {
-          console.log("Errors", err);
-        });
 
       if (this.store.valueSearch !== "") {
         // only movies
@@ -40,6 +30,16 @@ export default {
       } else {
         store.apiURL = `https://api.themoviedb.org/3/movie/popular?api_key=d724d9a3e0faf23928324d1fe5b4faa5`
       }
+
+      axios
+        .get(store.apiURL)
+        .then(res => {
+          store.moviesList = res.data.results;
+        })
+        .catch(err => {
+          console.log("Errors", err);
+        });
+
     },
   },
 
@@ -55,7 +55,7 @@ export default {
   </header>
 
   <main>
-    <MoviesList @search="getMovies" />
+    <MoviesList />
   </main>
 </template>
 

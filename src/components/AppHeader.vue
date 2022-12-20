@@ -14,22 +14,35 @@ export default {
 
 <template>
     <img class="logo" src="../img/Logo-Netflix.png" alt="">
-    <input placeholder="Cerca" @keyup.enter="$emit('search')" @keyup="$emit('search')" v-model="store.valueSearch"
-        type="search">
-    <!-- <button @click="$emit('search')"></button> -->
+    <div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input placeholder="Cerca" @keyup.enter="$emit('search')" @keyup="$emit('search')" v-model="store.valueSearch"
+            type="search">
+        <!-- <button @click="$emit('search')"></button> -->
+    </div>
+
 </template>
 
 <style lang="scss" scoped>
+@use '../style.scss' as *;
+
 .logo {
     width: 150px;
 }
 
+.fa-magnifying-glass {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 input {
-    color: white;
+    color: $red-neflix;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 0;
     padding: 6px;
-    width: 40vh;
+    width: 35vh;
     background-color: black;
 
     &:hover {

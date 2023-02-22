@@ -47,7 +47,7 @@ export default {
 
 .info-movie {
     display: none;
-    border: 1px solid $red-neflix;
+    border: 1px solid $red-netflix;
     position: absolute;
     top: 0;
     left: 0;

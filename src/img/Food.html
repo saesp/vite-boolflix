@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="module" src="./Food_files/client"></script>
+
+  
+  <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Food_files/all.min.css">
+  <title>Food</title>
+<style type="text/css" data-vite-dev-id="C:/Users/salva/OneDrive/Desktop/boolean/js/proj-html-vuejs/src/style.scss">* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f1;
+  color: #6a6b65;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h3,
+h4 {
+  color: #333338;
+}
+
+h3 {
+  letter-spacing: 3px;
+}
+
+h1,
+h4 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 12px;
+}
+
+input {
+  font-size: 12px;
+}
+
+.orange-button:hover {
+  background-color: orangered;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/salva/OneDrive/Desktop/boolean/js/proj-html-vuejs/src/components/AppHeader.vue?vue&amp;type=style&amp;index=0&amp;scoped=48a13218&amp;lang.scss">*[data-v-48a13218] {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body[data-v-48a13218] {
+  background-color: #f5f5f1;
+  color: #6a6b65;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+h3[data-v-48a13218],
+h4[data-v-48a13218] {
+  color: #333338;
+}
+h3[data-v-48a13218] {
+  letter-spacing: 3px;
+}
+h1[data-v-48a13218],
+h4[data-v-48a13218] {
+  font-family: "Times New Roman", Times, serif;
+}
+h4[data-v-48a13218] {
+  font-size: 18px;
+}
+button[data-v-48a13218] {
+  cursor: pointer;
+  font-size: 12px;
+}
+input[data-v-48a13218] {
+  font-size: 12px;
+}
+.orange-button[data-v-48a13218]:hover {
+  background-color: orangered;
+}
+header[data-v-48a13218] {
+  padding: 15px 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: white;
+}
+.sect-1[data-v-48a13218] {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #94908b;
+}
+.sect-1 ul[data-v-48a13218] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  list-style-type: none;
+}
+.sect-1 ul li[data-v-48a13218] {
+  cursor: pointer;
+}
+.sect-1 ul #ios[data-v-48a13218] {
+  background-color: #fc7525;
+  padding: 3px 7px;
+  border-radius: 5px;
+  color: white;
+  margin-left: -15px;
+}
+.sect-2[data-v-48a13218] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sect-3 .nav-ul[data-v-48a13218] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  list-style-type: none;
+}
+.sect-3 .nav-ul li[data-v-48a13218] {
+  color: #333338;
+  padding-bottom: 7px;
+  cursor: pointer;
+}
+.sect-3 .nav-ul li[data-v-48a13218]:hover {
+  color: #fc7525;
+}
+.sect-3 .nav-ul .nav-active[data-v-48a13218] {
+  color: #fc7525;
+  border-bottom: 3px solid #fc7525;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/salva/OneDrive/Desktop/boolean/js/proj-html-vuejs/src/components/AppFooter.vue?vue&amp;type=style&amp;index=0&amp;scoped=6704560a&amp;lang.scss">*[data-v-6704560a] {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body[data-v-6704560a] {
+  background-color: #f5f5f1;
+  color: #6a6b65;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+h3[data-v-6704560a],
+h4[data-v-6704560a] {
+  color: #333338;
+}
+h3[data-v-6704560a] {
+  letter-spacing: 3px;
+}
+h1[data-v-6704560a],
+h4[data-v-6704560a] {
+  font-family: "Times New Roman", Times, serif;
+}
+h4[data-v-6704560a] {
+  font-size: 18px;
+}
+button[data-v-6704560a] {
+  cursor: pointer;
+  font-size: 12px;
+}
+input[data-v-6704560a] {
+  font-size: 12px;
+}
+.orange-button[data-v-6704560a]:hover {
+  background-color: orangered;
+}
+footer[data-v-6704560a] {
+  background-color: white;
+}
+.sect-1[data-v-6704560a] {
+  padding: 20vh 0;
+  text-align: center;
+  background-color: white;
+  font-size: 13px;
+}
+.sect-1 h3[data-v-6704560a] {
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-family: "Times New Roman", Times, serif;
+}
+.sect-1 h3 span[data-v-6704560a] {
+  color: #fc7525;
+}
+.sect-1 p[data-v-6704560a] {
+  width: 100vh;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.sect-1 input[data-v-6704560a] {
+  padding: 10px;
+  width: 50vh;
+  margin-right: 10px;
+  border: 2px solid #edede8;
+  border-radius: 5px;
+}
+.sect-1 button[data-v-6704560a] {
+  padding: 10px 40px;
+  margin-left: 10px;
+  color: white;
+  background-color: #fc7525;
+  border: 0;
+}
+.sect-1 > div[data-v-6704560a] {
+  margin-top: 30px;
+}
+.sect-2 ul[data-v-6704560a] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+.sect-2 ul img[data-v-6704560a] {
+  width: 100%;
+}
+.sect-3[data-v-6704560a] {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  margin: auto;
+  padding: 50px 0;
+}
+.sect-3 h4[data-v-6704560a] {
+  color: #fc7525;
+  letter-spacing: 5px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.sect-3 .part1 img[data-v-6704560a] {
+  width: 175px;
+}
+.sect-3 .part1 ul[data-v-6704560a] {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  color: #94908b;
+  font-size: 14px;
+}
+.sect-3 .part1 ul li[data-v-6704560a] {
+  cursor: pointer;
+}
+.sect-3 .part2 ul[data-v-6704560a] {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #333338;
+}
+.sect-3 .part2 ul li[data-v-6704560a] {
+  cursor: pointer;
+}
+.sect-3 .part2 ul li[data-v-6704560a]:hover {
+  color: #fc7525;
+}
+.sect-3 .part2 ul .disp-none[data-v-6704560a] {
+  display: none;
+}
+.sect-3 .part3 div[data-v-6704560a] {
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 200px;
+  color: #94908b;
+}
+.sect-3 .part3 div[data-v-6704560a]:hover {
+  color: #fc7525;
+}
+.sect-3 .part3 div i[data-v-6704560a] {
+  font-size: 14px;
+  margin-right: 10px;
+}
+.sect-3 .part4 div[data-v-6704560a] {
+  margin-top: 10px;
+}
+.sect-3 .part4 img[data-v-6704560a] {
+  width: 175px;
+  cursor: pointer;
+}
+.sect-4[data-v-6704560a] {
+  font-size: 11px;
+  background-color: #f5f5f1;
+  text-align: center;
+  padding: 30px 0 20px;
+  border-top: 2px solid #edede8;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/salva/OneDrive/Desktop/boolean/js/proj-html-vuejs/src/components/Main1.vue?vue&amp;type=style&amp;index=0&amp;scoped=9aa9ccce&amp;lang.scss">*[data-v-9aa9ccce] {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body[data-v-9aa9ccce] {
+  background-color: #f5f5f1;
+  color: #6a6b65;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+h3[data-v-9aa9ccce],
+h4[data-v-9aa9ccce] {
+  color: #333338;
+}
+h3[data-v-9aa9ccce] {
+  letter-spacing: 3px;
+}
+h1[data-v-9aa9ccce],
+h4[data-v-9aa9ccce] {
+  font-family: "Times New Roman", Times, serif;
+}
+h4[data-v-9aa9ccce] {
+  font-size: 18px;
+}
+button[data-v-9aa9ccce] {
+  cursor: pointer;
+  font-size: 12px;
+}
+input[data-v-9aa9ccce] {
+  font-size: 12px;
+}
+.orange-button[data-v-9aa9ccce]:hover {
+  background-color: orangered;
+}
+.container[data-v-9aa9ccce] {
+  background-image: url(/img/imgs/single-post-img3.jpg);
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  margin-bottom: 50vh;
+}
+#todays-pick[data-v-9aa9ccce] {
+  padding: 30px 30px;
+  border-radius: 5px;
+  background-color: white;
+  width: 35%;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  transform: translate(50%, 50%);
+  bottom: 50%;
+  right: 50%;
+}
+#todays-pick h1[data-v-9aa9ccce] {
+  color: #333338;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+#todays-pick .date[data-v-9aa9ccce] {
+  font-family: "Times New Roman", Times, serif;
+  color: #6a6b65;
+}
+#todays-pick #orange-cell[data-v-9aa9ccce] {
+  color: white;
+  padding: 7px 12px;
+  border-radius: 5px;
+  position: absolute;
+  background-color: #fc7525;
+  transform: translate(50%);
+  right: 50%;
+  top: -16px;
+}
+#foodie-journal[data-v-9aa9ccce] {
+  text-align: center;
+  background-color: white;
+  width: 65%;
+  padding: 25px;
+  position: absolute;
+  transform: translate(50%);
+  right: 50%;
+  bottom: -35vh;
+}
+#foodie-journal h3[data-v-9aa9ccce] {
+  margin-bottom: 25px;
+}
+#foodie-journal > div[data-v-9aa9ccce] {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+#foodie-journal > div img[data-v-9aa9ccce] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#foodie-journal > div h4[data-v-9aa9ccce] {
+  margin: 0 auto 7px;
+}
+#foodie-journal > div .date[data-v-9aa9ccce] {
+  font-size: 12px;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/salva/OneDrive/Desktop/boolean/js/proj-html-vuejs/src/components/Main2.vue?vue&amp;type=style&amp;index=0&amp;scoped=8d1a0e6d&amp;lang.scss">*[data-v-8d1a0e6d] {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body[data-v-8d1a0e6d] {
+  background-color: #f5f5f1;
+  color: #6a6b65;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+h3[data-v-8d1a0e6d],
+h4[data-v-8d1a0e6d] {
+  color: #333338;
+}
+h3[data-v-8d1a0e6d] {
+  letter-spacing: 3px;
+}
+h1[data-v-8d1a0e6d],
+h4[data-v-8d1a0e6d] {
+  font-family: "Times New Roman", Times, serif;
+}
+h4[data-v-8d1a0e6d] {
+  font-size: 18px;
+}
+button[data-v-8d1a0e6d] {
+  cursor: pointer;
+  font-size: 12px;
+}
+input[data-v-8d1a0e6d] {
+  font-size: 12px;
+}
+.orange-button[data-v-8d1a0e6d]:hover {
+  background-color: orangered;
+}
+.container[data-v-8d1a0e6d] {
+  width: 65%;
+  margin: auto;
+  margin-bottom: 20vh;
+}
+.intro[data-v-8d1a0e6d] {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.intro h3[data-v-8d1a0e6d] {
+  margin-bottom: 20px;
+}
+.cont-img[data-v-8d1a0e6d] {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.cont-img #big-img[data-v-8d1a0e6d] {
+  background-color: white;
+}
+.cont-img #big-img img[data-v-8d1a0e6d] {
+  width: 480px;
+  margin-bottom: 30px;
+}
+.cont-img #big-img div[data-v-8d1a0e6d],
+.cont-img #big-img h4[data-v-8d1a0e6d] {
+  width: 64vh;
+  padding: 0 25px;
+}
+.cont-img #big-img h4[data-v-8d1a0e6d] {
+  margin-bottom: 5px;
+}
+.cont-img #big-img div[data-v-8d1a0e6d] {
+  margin-bottom: 30px;
+}
+.cont-img #big-img p[data-v-8d1a0e6d] {
+  border-top: 2px solid #edede8;
+  padding-top: 30px;
+  margin: 0 25px 20px;
+  width: 56vh;
+}
+.cont-img #big-img button[data-v-8d1a0e6d] {
+  padding: 10px 12px;
+  background-color: #fc7525;
+  margin: 0 25px;
+  border: 0;
+  color: white;
+}
+.cont-img #big-img button[data-v-8d1a0e6d]:hover {
+  background-color: orangered;
+}
+.cont-img #small-img[data-v-8d1a0e6d] {
+  display: flex;
+  gap: 20px;
+}
+.cont-img #small-img ul[data-v-8d1a0e6d] {
+  list-style-type: none;
+}
+.cont-img #small-img ul li[data-v-8d1a0e6d] {
+  width: calc(50% - 30px);
+  margin-bottom: 20px;
+}
+.cont-img #small-img ul li img[data-v-8d1a0e6d] {
+  width: 225px;
+  height: 150px;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/salva/OneDrive/Desktop/boolean/js/proj-html-vuejs/src/components/Main3.vue?vue&amp;type=style&amp;index=0&amp;scoped=628a0a32&amp;lang.scss">*[data-v-628a0a32] {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body[data-v-628a0a32] {
+  background-color: #f5f5f1;
+  color: #6a6b65;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+h3[data-v-628a0a32],
+h4[data-v-628a0a32] {
+  color: #333338;
+}
+h3[data-v-628a0a32] {
+  letter-spacing: 3px;
+}
+h1[data-v-628a0a32],
+h4[data-v-628a0a32] {
+  font-family: "Times New Roman", Times, serif;
+}
+h4[data-v-628a0a32] {
+  font-size: 18px;
+}
+button[data-v-628a0a32] {
+  cursor: pointer;
+  font-size: 12px;
+}
+input[data-v-628a0a32] {
+  font-size: 12px;
+}
+.orange-button[data-v-628a0a32]:hover {
+  background-color: orangered;
+}
+.container[data-v-628a0a32] {
+  width: 65%;
+  margin: 0 auto 20vh;
+  text-align: center;
+}
+.intro[data-v-628a0a32] {
+  width: 60vh;
+  margin: 0 auto 50px;
+}
+.intro h3[data-v-628a0a32] {
+  margin-bottom: 20px;
+}
+.cards[data-v-628a0a32] {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.cards .card[data-v-628a0a32] {
+  background-color: white;
+  width: calc(25% - 30px);
+  margin-bottom: 15px;
+  padding: 15px;
+  color: #333338;
+  font-size: 12px;
+}
+.cards .card img[data-v-628a0a32] {
+  height: 100px;
+  margin-bottom: 10px;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/salva/OneDrive/Desktop/boolean/js/proj-html-vuejs/src/components/Main4.vue?vue&amp;type=style&amp;index=0&amp;scoped=9d53226c&amp;lang.scss">*[data-v-9d53226c] {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body[data-v-9d53226c] {
+  background-color: #f5f5f1;
+  color: #6a6b65;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+h3[data-v-9d53226c],
+h4[data-v-9d53226c] {
+  color: #333338;
+}
+h3[data-v-9d53226c] {
+  letter-spacing: 3px;
+}
+h1[data-v-9d53226c],
+h4[data-v-9d53226c] {
+  font-family: "Times New Roman", Times, serif;
+}
+h4[data-v-9d53226c] {
+  font-size: 18px;
+}
+button[data-v-9d53226c] {
+  cursor: pointer;
+  font-size: 12px;
+}
+input[data-v-9d53226c] {
+  font-size: 12px;
+}
+.orange-button[data-v-9d53226c]:hover {
+  background-color: orangered;
+}
+.container[data-v-9d53226c] {
+  width: 65%;
+  margin: 0 auto 15vh;
+}
+.intro[data-v-9d53226c] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.intro h3[data-v-9d53226c] {
+  margin-bottom: 20px;
+}
+.intro p[data-v-9d53226c] {
+  width: 60vh;
+}
+.intro button[data-v-9d53226c] {
+  padding: 8px 14px;
+  color: white;
+  background-color: #fc7525;
+  border: 0;
+}
+.intro button i[data-v-9d53226c] {
+  margin-left: 5px;
+}
+.imgs[data-v-9d53226c] {
+  display: flex;
+  justify-content: space-between;
+}
+.imgs .sect-left[data-v-9d53226c] {
+  width: 65%;
+}
+.imgs .sect-left .big-img[data-v-9d53226c] {
+  background-color: white;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.imgs .sect-left .big-img img[data-v-9d53226c] {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.imgs .sect-left .big-img h4[data-v-9d53226c],
+.imgs .sect-left .big-img div[data-v-9d53226c],
+.imgs .sect-left .big-img p[data-v-9d53226c] {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.imgs .sect-left .big-img h4[data-v-9d53226c] {
+  margin-bottom: 5px;
+}
+.imgs .sect-left .big-img .date[data-v-9d53226c] {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #edede8;
+}
+.imgs .sect-left .big-img p[data-v-9d53226c] {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.imgs .sect-left .big-img .read-more[data-v-9d53226c] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.imgs .sect-left .small-imgs[data-v-9d53226c] {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.imgs .sect-left .small-imgs .card[data-v-9d53226c] {
+  width: calc(50% - 15px);
+  background-color: white;
+  text-align: center;
+}
+.imgs .sect-left .small-imgs .card img[data-v-9d53226c] {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.imgs .sect-left .small-imgs .card h4[data-v-9d53226c],
+.imgs .sect-left .small-imgs .card div[data-v-9d53226c] {
+  padding: 0 35px;
+}
+.imgs .sect-left .small-imgs .card div[data-v-9d53226c] {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.imgs .sect-left .small-imgs button[data-v-9d53226c] {
+  background-color: #edede8;
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+}
+.imgs .sect-left .small-imgs button[data-v-9d53226c]:hover {
+  background-color: #afafaf;
+}
+.imgs .sect-right[data-v-9d53226c] {
+  width: 30%;
+}
+.imgs .sect-right img[data-v-9d53226c] {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.imgs .sect-right #square[data-v-9d53226c] {
+  position: relative;
+}
+.imgs .sect-right #square span[data-v-9d53226c] {
+  color: black;
+  letter-spacing: 4px;
+  width: 120px;
+  text-align: center;
+  position: absolute;
+  transform: translate(50%, 50%);
+  right: 50%;
+  top: 33%;
+}
+.imgs .sect-right #input[data-v-9d53226c] {
+  padding-top: 30px;
+  border-top: 2px solid #edede8;
+  margin-bottom: 30px;
+}
+.imgs .sect-right #input input[data-v-9d53226c] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #edede8;
+  border-radius: 5px;
+}
+.imgs .sect-right #follow[data-v-9d53226c] {
+  color: #fc7525;
+  margin-bottom: 15px;
+  font-family: "Times New Roman", Times, serif;
+}
+.imgs .sect-right ul[data-v-9d53226c] {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+.imgs .sect-right ul li[data-v-9d53226c] {
+  width: 25px;
+  height: 25px;
+  padding: 20px;
+  background-color: #edede8;
+  position: relative;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.imgs .sect-right ul li[data-v-9d53226c]:hover {
+  background-color: #afafaf;
+}
+.imgs .sect-right ul li i[data-v-9d53226c] {
+  position: absolute;
+  transform: translate(50%, 50%);
+  right: 50%;
+  bottom: 50%;
+}
+img[data-v-9d53226c] {
+  width: 200px;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/salva/OneDrive/Desktop/boolean/js/proj-html-vuejs/src/App.vue?vue&amp;type=style&amp;index=0&amp;lang.scss"></style></head>
+
+<body>
+  <div id="app" data-v-app=""><header data-v-48a13218=""><section class="sect-1" data-v-48a13218=""><ul data-v-48a13218=""><li data-v-48a13218="">Download App</li><li id="ios" data-v-48a13218="">iOS</li><li data-v-48a13218="">Advetise with us</li></ul><ul data-v-48a13218=""><li data-v-48a13218=""><i class="fa-brands fa-facebook-f" data-v-48a13218=""></i></li><li data-v-48a13218=""><i class="fa-brands fa-instagram" data-v-48a13218=""></i></li><li data-v-48a13218=""><i class="fa-brands fa-twitter" data-v-48a13218=""></i></li><li data-v-48a13218=""><i class="fa-brands fa-youtube" data-v-48a13218=""></i></li></ul></section><section class="sect-2" data-v-48a13218=""><img src="./Food_files/avada-food-logo.png" alt="" data-v-48a13218=""></section><section class="sect-3" data-v-48a13218=""><ul class="nav-ul" data-v-48a13218=""><li class="nav-active" data-v-48a13218="">Home</li><li class="" data-v-48a13218="">Recipes</li><li class="" data-v-48a13218="">Places</li><li class="" data-v-48a13218="">Blog</li><li class="" data-v-48a13218="">About</li><li class="" data-v-48a13218="">Contact</li><li data-v-48a13218=""><i class="fa-solid fa-magnifying-glass" data-v-48a13218=""></i></li></ul></section></header><main><div class="container" data-v-9aa9ccce=""><div id="todays-pick" data-v-9aa9ccce=""><div id="orange-cell" data-v-9aa9ccce="">TODAY'S PICK</div><h1 data-v-9aa9ccce="">Food Corner: Top Japanese Restaurants for Sushi</h1><div class="date" data-v-9aa9ccce="">March 25, 2019</div></div><div id="foodie-journal" data-v-9aa9ccce=""><h3 data-v-9aa9ccce="">FOODIE JOURNAL</h3><div data-v-9aa9ccce=""><div data-v-9aa9ccce=""><img src="./Food_files/single-post-img3.jpg" alt="" data-v-9aa9ccce=""><h4 data-v-9aa9ccce="">Food Corner: Top Japanese Restaurants for Sushi</h4><div class="date" data-v-9aa9ccce="">By admin | March 25th, 2019</div></div><div data-v-9aa9ccce=""><img src="./Food_files/fi-roundup.jpg" alt="" data-v-9aa9ccce=""><h4 data-v-9aa9ccce="">Roundup: My New Favourite Recipes For Healthy Living</h4><div class="date" data-v-9aa9ccce="">By admin | March 25th, 2019</div></div><div data-v-9aa9ccce=""><img src="./Food_files/fi-toasts.jpg" alt="" data-v-9aa9ccce=""><h4 data-v-9aa9ccce="">Why These Toasts with Tea are My New Favourite</h4><div class="date" data-v-9aa9ccce="">By admin | March 25th, 2019 </div></div></div></div></div><div class="container" data-v-8d1a0e6d=""><div class="intro" data-v-8d1a0e6d=""><h3 data-v-8d1a0e6d="">POPULAR RECIPES</h3><p data-v-8d1a0e6d="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, accusamus nobis tenetur veritatis alias expedita nulla cumque doloremque ea quis ipsa impedit assumenda hic, aliquid fuga. Illo sint voluptatibus vitae!</p></div><div class="cont-img" data-v-8d1a0e6d=""><span id="big-img" data-v-8d1a0e6d=""><img src="./Food_files/Yogurt-Nan.jpg" alt="" data-v-8d1a0e6d=""><h4 data-v-8d1a0e6d="">Lunch Favourite with Salad, Naan and Beans</h4><div data-v-8d1a0e6d="">Bakery, Featured</div><p data-v-8d1a0e6d="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magni recusandae numquam dolor sequi dignissimos illum, aperiam ratione rem mollitia, qui dicta vel animi. Id excepturi labore totam asperiores nostrum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod commodi beatae eius. Molestias recusandae vitae asperiores unde eveniet optio nostrum repudiandae inventore maxime? Eos corrupti veniam esse fugiat pariatur recusandae.</p><button class="orange-button" data-v-8d1a0e6d="">LEARN MORE</button></span><span id="small-img" data-v-8d1a0e6d=""><ul data-v-8d1a0e6d=""><li data-v-8d1a0e6d=""><img src="./Food_files/Mixed-fruits.jpg" alt="" data-v-8d1a0e6d=""></li><li data-v-8d1a0e6d=""><img src="./Food_files/r-rachel-park-366508-unsplash-min.jpg" alt="" data-v-8d1a0e6d=""></li><li data-v-8d1a0e6d=""><img src="./Food_files/r-michelle-tsang-500721-unsplash-min.jpg" alt="" data-v-8d1a0e6d=""></li><li data-v-8d1a0e6d=""><img src="./Food_files/quick-summer-drink-460x295.jpg" alt="" data-v-8d1a0e6d=""></li></ul><ul data-v-8d1a0e6d=""><li data-v-8d1a0e6d=""><img src="./Food_files/r-maarten-van-den-heuvel-400626-unsplash-min-460x295.jpg" alt="" data-v-8d1a0e6d=""></li><li data-v-8d1a0e6d=""><img src="./Food_files/perfect-cosmopolitan-460x295.jpg" alt="" data-v-8d1a0e6d=""></li><li data-v-8d1a0e6d=""><img src="./Food_files/fi2x-6-460x295.jpg" alt="" data-v-8d1a0e6d=""></li><li data-v-8d1a0e6d=""><img src="./Food_files/r-brooke-lark-96398-unsplash-min-460x295.jpg" alt="" data-v-8d1a0e6d=""></li></ul></span></div></div><div class="container" data-v-628a0a32=""><div class="intro" data-v-628a0a32=""><h3 data-v-628a0a32="">CULINARY COLLECTION</h3><p data-v-628a0a32="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius nobis aut voluptatem numquam dicta cumque </p></div><div class="cards" data-v-628a0a32=""><div class="card" data-v-628a0a32=""><img src="./Food_files/drinks-recipes.png" alt="" data-v-628a0a32=""><div data-v-628a0a32="">DRINKS</div></div><div class="card" data-v-628a0a32=""><img src="./Food_files/soups-recipes.png" alt="" data-v-628a0a32=""><div data-v-628a0a32="">SOUPS</div></div><div class="card" data-v-628a0a32=""><img src="./Food_files/baking-recipes.png" alt="" data-v-628a0a32=""><div data-v-628a0a32="">BAKERY</div></div><div class="card" data-v-628a0a32=""><img src="./Food_files/dinner-recipes.png" alt="" data-v-628a0a32=""><div data-v-628a0a32="">DINNER</div></div><div class="card" data-v-628a0a32=""><img src="./Food_files/healthy-recipes.png" alt="" data-v-628a0a32=""><div data-v-628a0a32="">HEALTHY</div></div><div class="card" data-v-628a0a32=""><img src="./Food_files/staff-picks.png" alt="" data-v-628a0a32=""><div data-v-628a0a32="">STAFF PICKS</div></div><div class="card" data-v-628a0a32=""><img src="./Food_files/premium-recipes.png" alt="" data-v-628a0a32=""><div data-v-628a0a32="">APPETISERS</div></div><div class="card" data-v-628a0a32=""><img src="./Food_files/quick-easy-recipes.png" alt="" data-v-628a0a32=""><div data-v-628a0a32="">QUICK &amp; EASY</div></div></div></div><div class="container" data-v-9d53226c=""><div class="intro" data-v-9d53226c=""><span data-v-9d53226c=""><h3 data-v-9d53226c="">CULINARY COLLECTION</h3><p data-v-9d53226c="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius nobis aut voluptatem numquam dicta </p></span><button class="orange-button" data-v-9d53226c="">READ OUR BLOG <i class="fa-solid fa-book-open-reader" data-v-9d53226c=""></i></button></div><div class="imgs" data-v-9d53226c=""><span class="sect-left" data-v-9d53226c=""><div class="big-img" data-v-9d53226c=""><img src="./Food_files/single-post-img3.jpg" alt="" data-v-9d53226c=""><h4 data-v-9d53226c="">Food Corner: Top Japanase Restaurants for Sushi</h4><div class="date" data-v-9d53226c="">March 25, 2019</div><p data-v-9d53226c="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eveniet quidem harum earum repellendus in distinctio ea inventore consectetur. Non ducimus minima, illo repudiandae animi quo perferendis eveniet excepturi quaerat </p><div class="read-more" data-v-9d53226c=""><span data-v-9d53226c="">Read More &gt;</span><span data-v-9d53226c="">o</span></div></div><div class="small-imgs" data-v-9d53226c=""><div class="card" data-v-9d53226c=""><img src="./Food_files/fi-roundup.jpg" alt="" data-v-9d53226c=""><h4 data-v-9d53226c="">Food Corner: Top Japanese Restaurants for Sushi</h4><div class="date" data-v-9d53226c="">March 25, 2019</div></div><div class="card" data-v-9d53226c=""><img src="./Food_files/fi-korean-food.jpg" alt="" data-v-9d53226c=""><h4 data-v-9d53226c="">Food Corner: Top Japanese Restaurants for Sushi</h4><div class="date" data-v-9d53226c="">March 25, 2019</div></div><div class="card" data-v-9d53226c=""><img src="./Food_files/fi-toasts.jpg" alt="" data-v-9d53226c=""><h4 data-v-9d53226c="">Food Corner: Top Japanese Restaurants for Sushi</h4><div class="date" data-v-9d53226c="">March 25, 2019</div></div><div class="card" data-v-9d53226c=""><img src="./Food_files/fi-street-food.jpg" alt="" data-v-9d53226c=""><h4 data-v-9d53226c="">Food Corner: Top Japanese Restaurants for Sushi</h4><div class="date" data-v-9d53226c="">March 25, 2019</div></div><div class="card" data-v-9d53226c=""><img src="./Food_files/fi-organic-breakfast.jpg" alt="" data-v-9d53226c=""><h4 data-v-9d53226c="">Food Corner: Top Japanese Restaurants for Sushi</h4><div class="date" data-v-9d53226c="">March 25, 2019</div></div><div class="card" data-v-9d53226c=""><img src="./Food_files/fi-water-side-rest.jpg" alt="" data-v-9d53226c=""><h4 data-v-9d53226c="">Food Corner: Top Japanese Restaurants for Sushi</h4><div class="date" data-v-9d53226c="">March 25, 2019</div></div><button data-v-9d53226c="">LOAD MORE POSTS</button></div></span><span class="sect-right" data-v-9d53226c=""><div id="square" data-v-9d53226c=""><img src="./Food_files/ad-bg.jpg" alt="" data-v-9d53226c=""><span data-v-9d53226c="">VIEW OUR LATEST RECIPES</span></div><div data-v-9d53226c=""><img src="./Food_files/singapore-featured-image.jpg" alt="" data-v-9d53226c=""></div><div id="input" data-v-9d53226c=""><input type="search" placeholder="Search..." data-v-9d53226c=""></div><div id="follow" data-v-9d53226c="">Follow Us</div><ul data-v-9d53226c=""><li data-v-9d53226c=""><i class="fa-brands fa-facebook-f" data-v-9d53226c=""></i></li><li data-v-9d53226c=""><i class="fa-brands fa-instagram" data-v-9d53226c=""></i></li><li data-v-9d53226c=""><i class="fa-brands fa-twitter" data-v-9d53226c=""></i></li><li data-v-9d53226c=""><i class="fa-brands fa-youtube" data-v-9d53226c=""></i></li><li data-v-9d53226c=""><i class="fa-brands fa-pinterest-p" data-v-9d53226c=""></i></li></ul></span></div></div></main><footer data-v-6704560a=""><section class="sect-1" data-v-6704560a=""><h3 data-v-6704560a="">Subscribe <span data-v-6704560a="">E</span> Receive A Free eBook</h3><p data-v-6704560a="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat tenetur fugiat laboriosam maiores neque sint culpa recusandae cumque dolorum cupiditate </p><input type="email" placeholder="Insert your mail...*" data-v-6704560a=""><button class="orange-button" data-v-6704560a="">SUBSCRIBE</button><div data-v-6704560a="">Lorem ipsum dolor sit amet consectetur adipisicing</div></section><section class="sect-2" data-v-6704560a=""><ul data-v-6704560a=""><li data-v-6704560a=""><img src="./Food_files/Yogurt-Nan.jpg" alt="" data-v-6704560a=""></li><li data-v-6704560a=""><img src="./Food_files/Mixed-fruits.jpg" alt="" data-v-6704560a=""></li><li data-v-6704560a=""><img src="./Food_files/r-rachel-park-366508-unsplash-min.jpg" alt="" data-v-6704560a=""></li><li data-v-6704560a=""><img src="./Food_files/r-michelle-tsang-500721-unsplash-min.jpg" alt="" data-v-6704560a=""></li></ul></section><section class="sect-3" data-v-6704560a=""><div class="part1" data-v-6704560a=""><img src="./Food_files/avada-food-logo-mob.png" alt="" data-v-6704560a=""><ul id="social" data-v-6704560a=""><li data-v-6704560a=""><i class="fa-brands fa-facebook-f" data-v-6704560a=""></i></li><li data-v-6704560a=""><i class="fa-brands fa-instagram" data-v-6704560a=""></i></li><li data-v-6704560a=""><i class="fa-brands fa-twitter" data-v-6704560a=""></i></li><li data-v-6704560a=""><i class="fa-brands fa-youtube" data-v-6704560a=""></i></li></ul></div><div class="part2" data-v-6704560a=""><ul data-v-6704560a=""><li class="disp-none" data-v-6704560a="">Home</li><li class="" data-v-6704560a="">Recipes</li><li class="" data-v-6704560a="">Places</li><li class="" data-v-6704560a="">Blog</li><li class="" data-v-6704560a="">About</li><li class="" data-v-6704560a="">Contact</li></ul></div><div class="part3" data-v-6704560a=""><h4 data-v-6704560a="">CONTACT</h4><div data-v-6704560a=""><i class="fa-solid fa-location-dot" data-v-6704560a=""></i> 775 New York Ave, Brooklyn, Kings, New York 11203</div><div data-v-6704560a=""><i class="fa-solid fa-phone" data-v-6704560a=""></i> +0100-505-0000</div><div data-v-6704560a=""><i class="fa-solid fa-envelope" data-v-6704560a=""></i> info@your-domain.com</div></div><div class="part4" data-v-6704560a=""><h4 data-v-6704560a="">GET OUR APP!</h4><div data-v-6704560a=""><img src="./Food_files/download-android.png" alt="" data-v-6704560a=""></div><div data-v-6704560a=""><img src="./Food_files/download-app-store.png" alt="" data-v-6704560a=""></div></div></section><section class="sect-4" data-v-6704560a=""> Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress </section></footer></div>
+  <script type="module" src="./Food_files/main.js.download"></script>
+
+
+</body></html>

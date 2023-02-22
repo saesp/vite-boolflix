@@ -38,7 +38,7 @@ export default {
 }
 
 input {
-    color: $red-neflix;
+    color: $red-netflix;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 0;
     padding: 6px;

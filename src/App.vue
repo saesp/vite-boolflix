@@ -20,30 +20,32 @@ export default {
   methods: {
     getMovies() {
 
-      if (this.store.valueSearch !== "") {
-        // only movies
-        // store.apiURL = `https://api.themoviedb.org/3/search/movie?api_key=d724d9a3e0faf23928324d1fe5b4faa5&query=${store.valueSearch}`
-        // only series
-        // `https://api.themoviedb.org/3/tv/popular?api_key=d724d9a3e0faf23928324d1fe5b4faa5`
-        // store.apiUrlMovies = `https://api.themoviedb.org/3/search/movie?api_key=d724d9a3e0faf23928324d1fe5b4faa5&query=${store.valueSearch}`,
-        // movies and series
-        store.apiURL = `https://api.themoviedb.org/3/search/multi?api_key=d724d9a3e0faf23928324d1fe5b4faa5&query=${store.valueSearch}`
+      if (this.store.valueSearch === "") {
+        // movies
+        store.apiUrlMovies = `https://api.themoviedb.org/3/movie/popular?api_key=d724d9a3e0faf23928324d1fe5b4faa5`,
+          // series 
+          store.apiUrlSeries = `https://api.themoviedb.org/3/tv/popular?api_key=d724d9a3e0faf23928324d1fe5b4faa5`
 
       } else {
-        store.apiURL = `https://api.themoviedb.org/3/movie/popular?api_key=d724d9a3e0faf23928324d1fe5b4faa5`,
-          store.apiUrlSeries = `https://api.themoviedb.org/3/tv/popular?api_key=d724d9a3e0faf23928324d1fe5b4faa5`
+        //search movies and series
+        store.apiUrlSearch = `https://api.themoviedb.org/3/search/multi?api_key=d724d9a3e0faf23928324d1fe5b4faa5&query=${store.valueSearch}`
+        // search movies
+        // store.apiURL = `https://api.themoviedb.org/3/search/movie?api_key=d724d9a3e0faf23928324d1fe5b4faa5&query=${store.valueSearch}`
+
       }
 
+      // AXIOS
+      // search
       axios
-        .get(store.apiURL)
+        .get(store.apiUrlSearch)
         .then(res => {
-          store.moviesTvList = res.data.results;
+          store.moviesTvSearch = res.data.results;
         })
         .catch(err => {
           console.log("Errors", err);
         });
 
-
+      // movies
       axios
         .get(store.apiUrlMovies)
         .then(res => {
@@ -53,6 +55,7 @@ export default {
           console.log("Errors", err);
         });
 
+      // series  
       axios
         .get(store.apiUrlSeries)
         .then(res => {
@@ -61,8 +64,6 @@ export default {
         .catch(err => {
           console.log("Errors", err);
         });
-
-
     },
   },
 
@@ -77,7 +78,7 @@ export default {
     <AppHeader @search="getMovies" />
   </header>
 
-  <main>
+  <main class="">
     <MoviesList />
   </main>
 </template>
@@ -88,11 +89,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 80px;
+  padding: 30px 75px;
 }
 
 main {
-  padding: 0 70px;
+  padding: 0 70px 40px;
 }
 </style>
 \

@@ -17,18 +17,28 @@ export default {
 </script>
 
 <template>
-    <h3 v-if="store.valueSearch == ''">Film più popolari</h3>
-    <h3 v-else>Cercati da te</h3>
-    <div :class="store.valueSearch == '' ? 'movies-container' : 'movies-search-container'">
-        <div class="movie" v-for="(movie, index) in store.moviesTvList" :key="index">
-            <Movie :info="movie" />
+    <div v-if="store.valueSearch == ''">
+        <h3>Film più popolari</h3>
+        <div class="movies-container">
+            <div class="movie" v-for="(movie, index) in store.moviesList" :key="index">
+                <Movie :info="movie" />
+            </div>
+        </div>
+
+        <h3 class="mt-4">Serie Tv più popolari</h3>
+        <div class="movies-container">
+            <div class="movie" v-for="(movie, index) in store.seriesList" :key="index">
+                <Movie :info="movie" />
+            </div>
         </div>
     </div>
 
-    <h3 v-if="store.valueSearch == ''">Serie Tv più popolari</h3>
-    <div class="movies-container">
-        <div class="movie" v-for="(movie, index) in store.seriesList" :key="index">
-            <Movie :info="movie" />
+    <div v-else>
+        <h3>Cercati da te</h3>
+        <div class="movies-search-container">
+            <div class="movie" v-for="(movie, index) in store.moviesTvSearch" :key="index">
+                <Movie :info="movie" />
+            </div>
         </div>
     </div>
 </template>
@@ -47,12 +57,12 @@ export default {
 
     .movie {
         width: 175px;
-        margin: 5px 0;
+        margin: 10px 5px;
     }
 }
 
 h3 {
-    margin: 0 10px;
+    margin: 0 2.5px;
 }
 
 // ::-webkit-scrollbar {

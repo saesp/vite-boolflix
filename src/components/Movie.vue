@@ -7,7 +7,9 @@ export default {
 
 <template>
     <div if="" class="card-movie">
-        <img class="img-movie" :src="`https://image.tmdb.org/t/p/w185/${info.poster_path}`" alt="">
+        <img class=" img-movie"
+            :src="`${info.poster_path}` != 'null' ? `https://image.tmdb.org/t/p/w185/${info.poster_path}` : 'public/n-netflix.jpeg'"
+            alt="">
 
         <ul class="info-movie">
             <li><strong>Titolo: </strong> "{{ info.title }}"</li>
@@ -74,5 +76,30 @@ export default {
 
 .flag {
     width: 20px;
+}
+
+
+// scrollbar
+.info-movie::-webkit-scrollbar {
+    // height: 7px;
+    width: 6px;
+}
+
+.info-movie::-webkit-scrollbar-thumb {
+    --tw-bg-opacity: 1;
+    background-color: rgba(86, 88, 105, var(--tw-bg-opacity));
+}
+
+.info-movie::-webkit-scrollbar-thumb {
+    background-color: rgb(136, 135, 135);
+    border-radius: 1000px;
+    // --tw-border-opacity: 1;
+    // border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+    // border-width: 1px;
+}
+
+.info-movie::-webkit-scrollbar-track {
+    background-color: rgba(110, 110, 110, 0.257);
+    border-radius: 1000px;
 }
 </style>

@@ -13,14 +13,17 @@ export default {
 </script>
 
 <template>
-    <img class="logo" src="../img/Logo-Netflix.png" alt="">
+    <div>
+        <img class="logo" src="../img/Logo-Netflix.png" alt="">
+        <span id="byse">by SE</span>
+    </div>
+
     <div>
         <i class="fa-solid fa-magnifying-glass"></i>
         <input placeholder="Cerca" @keyup.enter="$emit('search')" @keyup="$emit('search')" v-model="store.valueSearch"
             type="search">
         <!-- <button @click="$emit('search')"></button> -->
     </div>
-
 </template>
 
 <style lang="scss" scoped>
@@ -28,6 +31,11 @@ export default {
 
 .logo {
     width: 150px;
+}
+
+#byse {
+    color: $red-netflix;
+    margin-left: 10px;
 }
 
 .fa-magnifying-glass {

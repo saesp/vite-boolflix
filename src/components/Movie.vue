@@ -12,13 +12,25 @@ export default {
             alt="">
 
         <ul class="info-movie">
-            <li><strong>Titolo: </strong> "{{ info.title }}"</li>
+            <li v-if="info.title != 'null' || info.name != 'null'"><strong>Titolo: </strong> "{{ info.title ? info.title :
+                info.name }}"</li>
 
-            <li><strong>Titolo originale: </strong> "{{ info.original_title }}"</li>
+            <li v-if="info.original_title != 'null' || info.original_name != 'null'"><strong>Titolo originale: </strong>
+                "{{
+                    info.original_title ?
+                    info.original_title : info.original_name }}"</li>
 
-            <li>
+            <li v-if="info.original_language === 'en' ||
+                info.original_language === 'es' ||
+                info.original_language === 'fr' ||
+                info.original_language === 'is' ||
+                info.original_language === 'it' ||
+                info.original_language === 'no' ||
+                info.original_language === 'pl'">
+
                 <strong>Lingua originale: </strong> <img class="flag" :src="`/src/img/${info.original_language}.svg`"
                     alt="">
+
             </li>
 
             <li>
@@ -26,7 +38,7 @@ export default {
                 <span v-for="num in 5">{{ num <= Math.round(info.vote_average / 2) ? "&#9733;" : "&#9734;" }}</span>
             </li>
 
-            <li><strong>Overview: </strong>{{ info.overview }}</li>
+            <li v-if="info.overview != 'null'"><strong>Overview: </strong>{{ info.overview }}</li>
         </ul>
     </div>
 </template>

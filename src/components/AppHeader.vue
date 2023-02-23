@@ -41,6 +41,7 @@ export default {
 .fa-magnifying-glass {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.5);
+
     margin-right: 10px;
     vertical-align: middle;
 }

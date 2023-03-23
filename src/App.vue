@@ -96,4 +96,3 @@ main {
   padding: 0 70px 40px;
 }
 </style>
-\

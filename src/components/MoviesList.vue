@@ -18,7 +18,7 @@ export default {
 
 <template>
     <div v-if="store.valueSearch == ''">
-        <h3>Film più popolari</h3>
+        <h3 class="h3-home">Film più popolari</h3>
         <div class="movies-container">
             <div class="movie" v-for="(movie, index) in store.moviesList" :key="index">
                 <Movie :info="movie" />
@@ -34,7 +34,7 @@ export default {
     </div>
 
     <div v-else>
-        <h3>Cercati da te</h3>
+        <h3 class="h3-search">Cercati da te</h3>
         <div class="movies-search-container">
             <div class="movie" v-for="(movie, index) in store.moviesTvSearch" :key="index">
                 <Movie :info="movie" />
@@ -46,7 +46,13 @@ export default {
 <style lang="scss" scoped>
 @use '../style.scss' as *;
 
+h3 {
+    font-size: 21px;
+}
 
+.h3-home {
+    margin: 0 2.5px;
+}
 
 .movies-container {
     // flex-wrap: wrap;
@@ -54,27 +60,18 @@ export default {
     display: -webkit-box;
     // scrollbar-color: red;
 
-
     .movie {
         width: 175px;
         margin: 10px 5px;
     }
 }
 
-h3 {
-    margin: 0 2.5px;
-}
-
-// ::-webkit-scrollbar {
-//     // height: 5px;
-//     /* per browser Firefox */
-// }
-
 .movies-search-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
+    margin-top: 8px;
 
     .movie {
         width: calc(100%/7 - 10px);
@@ -84,18 +81,14 @@ h3 {
 
 // scrollbar
 .movies-container::-webkit-scrollbar {
-    height: 7px;
+    height: 6px;
     // width: 1rem;
-}
-
-.movies-container::-webkit-scrollbar-thumb {
-    --tw-bg-opacity: 1;
-    background-color: rgba(86, 88, 105, var(--tw-bg-opacity));
 }
 
 .movies-container::-webkit-scrollbar-thumb {
     background-color: $red-netflix;
     border-radius: 1000px;
+    // --tw-bg-opacity: 1;
     // --tw-border-opacity: 1;
     // border-color: rgba(255, 255, 255, var(--tw-border-opacity));
     // border-width: 1px;

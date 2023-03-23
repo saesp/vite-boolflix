@@ -15,7 +15,8 @@ export default {
 <template>
     <div>
         <img class="logo" src="../img/Logo-Netflix.png" alt="">
-        <span id="byse">by SE</span>
+        <span id="byse">by <i class="fa-solid fa-s"></i><i class="fa-solid fa-e"></i> <i
+                class="fa-regular fa-face-smile"></i></span>
     </div>
 
     <div>
@@ -31,11 +32,14 @@ export default {
 
 .logo {
     width: 150px;
+
 }
 
 #byse {
+    font-size: 13px;
     color: $red-netflix;
     margin-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .fa-magnifying-glass {
